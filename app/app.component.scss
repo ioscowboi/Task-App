@@ -1,0 +1,22 @@
+$green: #009688;
+
+.container{
+    padding-top: 3rem
+}
+.row{
+    margin-bottom: 1.5rem;
+}
+form{
+    text-align: center;
+}
+.btn{
+    background-color: $green;
+    border-color: $green;
+    margin-left: 1rem;
+}
+.form-control:focus{
+    border-color: $green
+}
+.fa.fa-plus{
+    padding: .5rem .5rem .5rem 0;
+}
