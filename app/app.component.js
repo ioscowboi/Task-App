@@ -19,7 +19,16 @@ var AppComponent = (function () {
             new task_1.Task("Buy a monkey", false),
             new task_1.Task("Sell a wrench", false)
         ];
+        // ensure only strings are stored to this var:
+        // intialize the object to allow browser users to create new tasks::
+        this.currentTask = new task_1.Task(null, false);
     }
+    // run this method when a task is added:
+    AppComponent.prototype.addTask = function () {
+        // temp var for storing current data to be added to the list:
+        var task = new task_1.Task(this.currentTask.content, this.currentTask.completed);
+        this.tasks.push(task);
+    };
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

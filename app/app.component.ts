@@ -24,5 +24,12 @@ export class AppComponent {
 
     ]
     // ensure only strings are stored to this var:
-    private str: string;
+        // intialize the object to allow browser users to create new tasks::
+    private currentTask = new Task(null, false);
+    // run this method when a task is added:
+    addTask(){
+        // temp var for storing current data to be added to the list:
+        let task = new Task(this.currentTask.content, this.currentTask.completed);
+        this.tasks.push(task);
+    }
  }

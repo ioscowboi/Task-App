@@ -1,10 +1,12 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 offset-md-3">
-            <form class="form-inline">
+            <!-- () << event binding:  -->
+            <form class="form-inline" (ngSubmit)="addTask()">
                 <div class="form-group">
                     <label for="content-field" class="sr-only"></label>
-                    <input type="text" class="form-control" placeholder="Enter a task...">
+                    <!-- [()] << two way data binding  -->
+                    <input type="text" class="form-control" placeholder="Enter a task..." [(ngModel)]="currentTask.content" name="content">
                 </div>
                 <button type="submit" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i>Add task</button>
             </form>
