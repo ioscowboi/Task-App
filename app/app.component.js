@@ -9,6 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+// create task component:
+var task_1 = require("./model/task");
 var AppComponent = (function () {
     function AppComponent() {
         // define task property:
@@ -17,6 +19,11 @@ var AppComponent = (function () {
             content: "Learn to code",
             completed: false
         };
+        // always use private properties so that nothing outside can modify it unless must remove:
+        this.tasks = [
+            new task_1.Task("Buy a monkey", false),
+            new task_1.Task("Sell a wrench", false)
+        ];
     }
     AppComponent = __decorate([
         core_1.Component({
