@@ -10,12 +10,6 @@ import { Task } from "./model/task";
 })
 export class AppComponent {
     // define task property:
-    task1: Task = {
-        // properties:
-        content: "Learn to code",
-        completed: false
-
-    }
     // always use private properties so that nothing outside can modify it unless must remove:
     private tasks = [
         new Task(

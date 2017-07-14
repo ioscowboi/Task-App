@@ -14,11 +14,6 @@ var task_1 = require("./model/task");
 var AppComponent = (function () {
     function AppComponent() {
         // define task property:
-        this.task1 = {
-            // properties:
-            content: "Learn to code",
-            completed: false
-        };
         // always use private properties so that nothing outside can modify it unless must remove:
         this.tasks = [
             new task_1.Task("Buy a monkey", false),
