@@ -1,0 +1,19 @@
+.gold-no-border, .card, .card-footer {
+  background-color: #ffffa5;
+  border: none; }
+
+.inline-block, .notComplete {
+  display: inline-block; }
+
+.card {
+  border-radius: 0;
+  padding: 1em; }
+
+.card-footer {
+  text-align: right; }
+
+i {
+  color: #CC0000;
+  padding-right: .5rem; }
+
+/*# sourceMappingURL=card.component.css.map */

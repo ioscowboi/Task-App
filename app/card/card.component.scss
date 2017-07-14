@@ -1,0 +1,25 @@
+.gold-no-border{
+    background-color: #ffffa5;
+    border: none,
+}
+.inline-block{
+    display: inline-block;
+}
+.card{
+    border-radius: 0;
+    padding: 1em;
+    @extend .gold-no-border
+}
+
+.card-footer{
+    text-align: right;
+    @extend .gold-no-border
+}
+
+i{
+    color: #CC0000;
+    padding-right: .5rem;
+}
+.notComplete{
+    @extend .inline-block
+}
