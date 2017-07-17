@@ -6,7 +6,11 @@
             <p>{{ task.content }}</p>
         </div>
         <div class="card-footer">
-            <i class="fa fa-times" aria-hidden="true"></i><p class="notComplete">Not Complete</p>
+            <!-- *ngIf allows us to add or remove elements from the dom based on a condition:  -->
+            <!--    remove Not Complete if the element hasn't been clicked  -->
+            <span *ngIf="!task.completed"><i class="fa fa-times" aria-hidden="true"></i><p class="notComplete">Not Complete</p></span>
+            <!--    hide "Not complete" and show "Completed" if a card is clicked -->
+            <span [hidden]="!task.completed"><i class="fa fa-check" aria-hidden="true"></i><p class="notComplete">Completed</p></span>
         </div>
     </div>
 </div>
