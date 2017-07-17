@@ -12,17 +12,9 @@ import { Task } from "./model/task";
 export class AppComponent {
     // define task property:
     // always use private properties so that nothing outside can modify it unless must remove:
-    private tasks = [
-        new Task(
-            "Buy a monkey",
-            false
-        ),
-        new Task(
-            "Sell a wrench",
-            false
-        )
-
-    ]
+        // deleted pre-defined task card data, and start w an empty array
+        // we do this by assigning "Task[]" object to tasks as an empty array:
+    private tasks: Task[] = [];
     // ensure only strings are stored to this var:
         // intialize the object to allow browser users to create new tasks::
     private currentTask = new Task(null, false);

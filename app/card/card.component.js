@@ -18,10 +18,17 @@ var CardComponent = (function () {
     CardComponent.prototype.statusToggle = function () {
         this.task.completed = !this.task.completed;
     };
+    CardComponent.prototype.deleteToggle = function () {
+        this.deleteCheck.deleted = !this.deleteCheck.deleted;
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', task_1.Task)
     ], CardComponent.prototype, "task", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], CardComponent.prototype, "deleteCheck", void 0);
     CardComponent = __decorate([
         core_1.Component({
             // Meta Data:

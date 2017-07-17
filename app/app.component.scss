@@ -1,5 +1,5 @@
 $green: #009688;
-
+$greenHover: #00769B;
 .container{
     padding-top: 3rem
 }
@@ -13,10 +13,21 @@ form{
     background-color: $green;
     border-color: $green;
     margin-left: 1rem;
+    &:hover{
+        background-color: $greenHover
+    }
 }
 .form-control:focus{
     border-color: $green
 }
 .fa.fa-plus{
     padding: .5rem .5rem .5rem 0;
+}
+.emptyMessage{
+    margin: 0px auto;
+    text-align: center;
+    p{
+        color: #cca;
+        font-weight: bold;
+    }
 }

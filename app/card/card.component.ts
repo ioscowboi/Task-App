@@ -25,4 +25,10 @@ export class CardComponent {
     statusToggle(){
         this.task.completed = !this.task.completed;
     }
+
+    @Input() deleteCheck: deleteOrNah;
+
+    deleteToggle(){
+        this.deleteCheck.deleted = !this.deleteCheck.deleted;
+    }
 }

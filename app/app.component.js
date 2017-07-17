@@ -15,10 +15,9 @@ var AppComponent = (function () {
     function AppComponent() {
         // define task property:
         // always use private properties so that nothing outside can modify it unless must remove:
-        this.tasks = [
-            new task_1.Task("Buy a monkey", false),
-            new task_1.Task("Sell a wrench", false)
-        ];
+        // deleted pre-defined task card data, and start w an empty array
+        // we do this by assigning "Task[]" object to tasks as an empty array:
+        this.tasks = [];
         // ensure only strings are stored to this var:
         // intialize the object to allow browser users to create new tasks::
         this.currentTask = new task_1.Task(null, false);

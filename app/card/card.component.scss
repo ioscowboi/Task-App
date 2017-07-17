@@ -1,23 +1,68 @@
+// *******************************************************
+// ********************extendables *********************//
+// *******************************************************
+
 .gold-no-border{
     background-color: #ffffa5;
-    border: none,
+    border: none;
 }
+.center{
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.margin-auto{
+    margin: 0px auto;
+}
+.block{
+    display: block;
+}
+// *******************************************************
+// ******************end extendables********************//
+// *******************************************************
+
+
 .inline-block{
     display: inline-block;
 }
 .card{
     border-radius: 0;
     padding: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-bottom: 0;
     @extend .gold-no-border;
-    &.completed, &.completed .card-footer{
+    &.completed, &.completed .card-footer, &.completed i{
         background-color: #EEE;
         color: #CCC;
     }
+        box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    :before, :after
+    {
+        content:"";
+        position:absolute; 
+        z-index:-1;
+        box-shadow:0 0 20px rgba(0,0,0,0.1);
+        top:19px;
+        bottom:10px;
+        left:0;
+        right:0;
+        border-radius:100px / 10px;
+    } 
+    :after
+    {
+        right:10px; 
+        left:auto; 
+        transform:skew(8deg) rotate(3deg);
+    }
+
+
 }
 
 .card-footer{
-    text-align: right;
-    @extend .gold-no-border
+    @extend .center;
+    @extend .gold-no-border;
 }
 
 i{
@@ -25,5 +70,20 @@ i{
     padding-right: .5rem;
 }
 .notComplete{
-    @extend .inline-block
+    // @extend .inline-block;
+    .prSpace{
+        vertical-align: middle;
+        @extend .center;
+        @extend .margin-auto;
+        @extend .block
+    }
+}
+.deleteOrNah{
+    font-size: 10px;
+    text-transform: lowercase;
+    max-width: 50px;
+    box-shadow: 1px 1px 8px;
+    @extend .margin-auto;
+    background-color: rgba(255,0,0,.7);
+    @extend .center
 }

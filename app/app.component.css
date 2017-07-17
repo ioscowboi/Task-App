@@ -11,11 +11,20 @@ form {
   background-color: #009688;
   border-color: #009688;
   margin-left: 1rem; }
+  .btn:hover {
+    background-color: #00769B; }
 
 .form-control:focus {
   border-color: #009688; }
 
 .fa.fa-plus {
   padding: .5rem .5rem .5rem 0; }
+
+.emptyMessage {
+  margin: 0px auto;
+  text-align: center; }
+  .emptyMessage p {
+    color: #cca;
+    font-weight: bold; }
 
 /*# sourceMappingURL=app.component.css.map */

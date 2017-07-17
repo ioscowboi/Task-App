@@ -17,5 +17,10 @@
     </div>
     <div class="row">
         <app-card *ngFor="let task of tasks" [task]="task"></app-card>
+        <!-- display a message if the task list is empty:  -->
+        <div class="emptyMessage" *ngIf="tasks.length == 0">
+            <p>Empty task list!</p>
+            <p class="">Add new tasks if there's work to be done.</p>
+        </div>
     </div>
 </div>
