@@ -14,6 +14,10 @@ var task_1 = require('../model/task');
 var CardComponent = (function () {
     function CardComponent() {
     }
+    // for user error, create a toggle for undo-ing if a task is accidentally deleted:
+    CardComponent.prototype.statusToggle = function () {
+        this.task.completed = !this.task.completed;
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', task_1.Task)

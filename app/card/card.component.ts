@@ -20,4 +20,9 @@ export class CardComponent {
     // enables you to pass data into the Task property:
     //     when data is passed, it will be expecting something called Task, which is defined in our model folder::
     @Input() task: Task;
+
+    // for user error, create a toggle for undo-ing if a task is accidentally deleted:
+    statusToggle(){
+        this.task.completed = !this.task.completed;
+    }
 }

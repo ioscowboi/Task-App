@@ -1,5 +1,7 @@
 <div class="col-sm-3">
-    <div class="card">
+    <!-- Add data binding to toggle the truthiness of the card status, then add class binding to add the class completed
+            if the toggle is set to true  -->
+    <div class="card" (click)="statusToggle()" [class.completed]="task.completed">
         <div class="card-block">
             <p>{{ task.content }}</p>
         </div>

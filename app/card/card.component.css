@@ -8,6 +8,9 @@
 .card {
   border-radius: 0;
   padding: 1em; }
+  .card.completed, .card.completed .card-footer {
+    background-color: #EEE;
+    color: #CCC; }
 
 .card-footer {
   text-align: right; }
