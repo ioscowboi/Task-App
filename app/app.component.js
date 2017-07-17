@@ -28,6 +28,8 @@ var AppComponent = (function () {
         // temp var for storing current data to be added to the list:
         var task = new task_1.Task(this.currentTask.content, this.currentTask.completed);
         this.tasks.push(task);
+        // clear text after an event is added:
+        this.currentTask.content = null;
     };
     AppComponent = __decorate([
         core_1.Component({
