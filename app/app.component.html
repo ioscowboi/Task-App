@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="row">
-        <app-card *ngFor="let task of tasks" [task]="task"></app-card>
+        <app-card *ngFor="let task of tasks; let deleteCheck of deleteChecks" [task]="task" [deleteCheck]="deleteCheck"></app-card>
         <!-- display a message if the task list is empty:  -->
         <div class="emptyMessage" *ngIf="tasks.length == 0">
             <p>Empty task list!</p>

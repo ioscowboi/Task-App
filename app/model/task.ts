@@ -7,9 +7,9 @@ export class Task {
     }
 }
 
+// although this class does the same thing as Task, we need to keep track of them seperately:
 export class deleteOrNah {
     constructor(
-        public content: string,
         public deleted: boolean
     ) { 
         // what should the constructor run every time a 'Task' class is created? Write here:

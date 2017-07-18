@@ -14,6 +14,9 @@
 .block, .notComplete .prSpace {
   display: block; }
 
+.hide, .deleted {
+  display: none; }
+
 .inline-block {
   display: inline-block; }
 

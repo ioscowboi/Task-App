@@ -8,9 +8,9 @@ var Task = (function () {
     return Task;
 }());
 exports.Task = Task;
+// although this class does the same thing as Task, we need to keep track of them seperately:
 var deleteOrNah = (function () {
-    function deleteOrNah(content, deleted) {
-        this.content = content;
+    function deleteOrNah(deleted) {
         this.deleted = deleted;
         // what should the constructor run every time a 'Task' class is created? Write here:
     }

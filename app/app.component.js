@@ -18,17 +18,23 @@ var AppComponent = (function () {
         // deleted pre-defined task card data, and start w an empty array
         // we do this by assigning "Task[]" object to tasks as an empty array:
         this.tasks = [];
+        this.deleteChecks = [];
         // ensure only strings are stored to this var:
         // intialize the object to allow browser users to create new tasks::
         this.currentTask = new task_1.Task(null, false);
+        this.deleteC = new task_1.deleteOrNah(false);
     }
     // run this method when a task is added:
     AppComponent.prototype.addTask = function () {
         // temp var for storing current data to be added to the list:
         var task = new task_1.Task(this.currentTask.content, this.currentTask.completed);
+        var deleteCheck = new task_1.deleteOrNah(this.deleteC.deleted);
         this.tasks.push(task);
+        this.deleteChecks.push(deleteCheck);
         // clear text after an event is added:
         this.currentTask.content = null;
+        // reset deleteC to false no matter what manipulation is done to an individual task:
+        this.deleteC.deleted = new task_1.deleteOrNah(false);
     };
     AppComponent = __decorate([
         core_1.Component({

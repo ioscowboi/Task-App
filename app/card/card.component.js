@@ -9,17 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-// create property to pass data to the task view:
+// create property to pass data from the task model:
 var task_1 = require('../model/task');
 var CardComponent = (function () {
     function CardComponent() {
     }
-    // for user error, create a toggle for undo-ing if a task is accidentally deleted:
+    // for user error, create a toggle for undo-ing if a task is accidentally marked complete:
     CardComponent.prototype.statusToggle = function () {
         this.task.completed = !this.task.completed;
     };
     CardComponent.prototype.deleteToggle = function () {
         this.deleteCheck.deleted = !this.deleteCheck.deleted;
+        console.log('delete pushed!');
     };
     __decorate([
         core_1.Input(), 
@@ -27,7 +28,7 @@ var CardComponent = (function () {
     ], CardComponent.prototype, "task", void 0);
     __decorate([
         core_1.Input(), 
-        __metadata('design:type', Object)
+        __metadata('design:type', task_1.deleteOrNah)
     ], CardComponent.prototype, "deleteCheck", void 0);
     CardComponent = __decorate([
         core_1.Component({

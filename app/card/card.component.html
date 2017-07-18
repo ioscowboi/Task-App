@@ -12,7 +12,10 @@
             <!--    hide "Not complete" and show "Completed" if a card is clicked -->
             <span [hidden]="!task.completed"><i class="fa fa-check" aria-hidden="true"></i><p class="notComplete">Completed</p></span>
         </div>
+        <!--basic ability to delete a task:  -->
+        <div class="deleteOrNah center" >
+            <p class="notComplete prSpace" (click)="deleteToggle()" [class.deleted]="deleteCheck.deleted" >delete </p>
         
+        </div>        
     </div>
-    <div class="deleteOrNah center" ><p class="notComplete prSpace" (click)="statusToggle()" [class.completed]="task.completed">delete </p></div>
 </div>

@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
-// create property to pass data to the task view:
-import { Task } from '../model/task';
+// create property to pass data from the task model:
+import { Task, deleteOrNah } from '../model/task';
 
 @Component({
     // Meta Data:
@@ -20,15 +20,14 @@ export class CardComponent {
     // enables you to pass data into the Task property:
     //     when data is passed, it will be expecting something called Task, which is defined in our model folder::
     @Input() task: Task;
+    @Input() deleteCheck: deleteOrNah;
 
-    // for user error, create a toggle for undo-ing if a task is accidentally deleted:
+    // for user error, create a toggle for undo-ing if a task is accidentally marked complete:
     statusToggle(){
         this.task.completed = !this.task.completed;
     }
-
-    @Input() deleteCheck: deleteOrNah;
-
     deleteToggle(){
         this.deleteCheck.deleted = !this.deleteCheck.deleted;
+        console.log('delete pushed!');
     }
 }
