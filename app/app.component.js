@@ -34,7 +34,7 @@ var AppComponent = (function () {
         // clear text after an event is added:
         this.currentTask.content = null;
         // reset deleteC to false no matter what manipulation is done to an individual task:
-        this.deleteC.deleted = new task_1.deleteOrNah(false);
+        this.deleteC.deleted = false;
     };
     AppComponent = __decorate([
         core_1.Component({

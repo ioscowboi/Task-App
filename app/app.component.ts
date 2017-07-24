@@ -30,6 +30,6 @@ export class AppComponent {
         // clear text after an event is added:
         this.currentTask.content = null;
         // reset deleteC to false no matter what manipulation is done to an individual task:
-        this.deleteC.deleted = new deleteOrNah(false);
+        this.deleteC.deleted = false;
     }
  }

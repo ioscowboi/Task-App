@@ -88,4 +88,5 @@ i{
     background-color: rgba(255,0,0,.7);
     @extend .center
 }
-.deleted{ @extend .hide }
+.deleted{ 
+     @extend .hide }
