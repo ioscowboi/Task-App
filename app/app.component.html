@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-6 offset-md-3">
             <!-- () << event binding:  -->
@@ -16,11 +16,17 @@
         </div>
     </div>
     <div class="row">
-        <app-card *ngFor="let task of tasks; let deleteCheck of deleteChecks" [task]="task" [deleteCheck]="deleteCheck"></app-card>
-        <!-- display a message if the task list is empty:  -->
-        <div class="emptyMessage" *ngIf="tasks.length == 0">
-            <p>Empty task list!</p>
-            <p class="">Add new tasks if there's work to be done.</p>
+        <div class="col-md-2">
+            <weather-widget></weather-widget>
         </div>
+        <div class="col-md-8">
+            <app-card *ngFor="let task of tasks; let deleteCheck of deleteChecks" [task]="task" [deleteCheck]="deleteCheck"></app-card>
+            <!-- display a message if the task list is empty:  -->
+            <div class="emptyMessage" *ngIf="tasks.length == 0">
+                <p>Empty task list!</p>
+                <p class="">Add new tasks if there's work to be done.</p>
+            </div>
+        </div>
+
     </div>
 </div>
